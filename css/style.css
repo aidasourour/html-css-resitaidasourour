@@ -79,13 +79,17 @@ a {
 }
 
 .hero {
+.hero {
   min-height: 78vh;
   display: flex;
   align-items: center;
-  padding: 5rem 6%;
+  padding: 7rem 6% 5rem;;
   background:
-    linear-gradient(rgba(15, 42, 33, 0.82), rgba(15, 42, 33, 0.82)),
+    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
+    url("../images/forest-hero.jpg"),
     var(--forest);
+  background-size: cover;
+  background-position: center;
   color: var(--white);
 }
 
@@ -448,5 +452,28 @@ button {
   .project-card,
   .contact-form {
     padding: 1.5rem;
+  }
+}
+.image-banner {
+  padding: 4rem 6% 0;
+  background-color: var(--cream);
+}
+
+.image-banner img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 600px) {
+  .image-banner {
+    padding: 2rem 5% 0;
+  }
+
+  .image-banner img {
+    max-height: 300px;
+    border-radius: 1rem;
   }
 }
