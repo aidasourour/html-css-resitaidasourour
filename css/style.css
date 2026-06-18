@@ -276,3 +276,40 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+.page-hero {
+  padding: 6rem 6%;
+  background-color: var(--forest);
+  color: var(--white);
+}
+
+.page-hero h1 {
+  max-width: 820px;
+  color: var(--white);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+}
+
+.page-hero p {
+  max-width: 680px;
+  font-size: 1.1rem;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.light-section {
+  background-color: var(--light-green);
+}
+
+.light-section > p {
+  max-width: 850px;
+}
+
+@media (max-width: 800px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+}
