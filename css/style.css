@@ -313,3 +313,40 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+.project-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.project-number {
+  margin: 0;
+  width: 3.3rem;
+  height: 3.3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--light-green);
+  color: var(--forest);
+  font-weight: 900;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+}
