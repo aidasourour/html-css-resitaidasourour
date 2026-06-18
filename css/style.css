@@ -607,3 +607,35 @@ button {
     padding: 1.5rem;
   }
 }
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  padding: 1.5rem;
+  background-color: rgba(15, 42, 33, 0.75);
+  z-index: 2000;
+  place-items: center;
+}
+
+.modal:target {
+  display: grid;
+}
+
+.modal-content {
+  max-width: 520px;
+  background-color: var(--cream);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.modal-content h2 {
+  color: var(--forest);
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+}
