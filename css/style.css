@@ -639,3 +639,29 @@ button {
 .modal-content p {
   margin-bottom: 1.5rem;
 }
+.about-hero {
+  background:
+    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
+    url("../images/community.jpg"),
+    var(--forest);
+  background-size: cover;
+  background-position: center;
+}
+
+.projects-hero {
+  background:
+    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
+    url("../images/nursery.jpg"),
+    var(--forest);
+  background-size: cover;
+  background-position: center;
+}
+
+.involved-hero {
+  background:
+    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
+    url("../images/seedlings.jpg"),
+    var(--forest);
+  background-size: cover;
+  background-position: center;
+}
