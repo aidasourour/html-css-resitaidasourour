@@ -22,10 +22,19 @@ html {
 
 body {
   margin: 0;
+  padding-top: 82px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background-color: var(--cream);
   line-height: 1.6;
+  body {
+  margin: 0;
+  padding-top: 82px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: var(--cream);
+  line-height: 1.6;
+}
 }
 
 img {
@@ -46,7 +55,10 @@ a {
   background-color: var(--cream);
   border-bottom: 1px solid var(--border);
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
   box-shadow: 0 6px 10px -8px rgba(0, 0, 0, 0.25);
 }
 
@@ -515,39 +527,83 @@ button {
   box-shadow: var(--shadow);
 }
 
-@media (max-width: 600px) {
-  .image-banner {
-    padding: 2rem 5% 0;
+@media (max-width: 900px) {
+  body {
+    padding-top: 0;
   }
 
-  .image-banner img {
-    max-height: 300px;
-    border-radius: 1rem;
+  .site-header {
+    position: static;
+    padding: 1.2rem 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
   }
-}
-.about-hero {
-  background:
-    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
-    url("../images/community.jpg"),
-    var(--forest);
-  background-size: cover;
-  background-position: center;
-}
 
-.projects-hero {
-  background:
-    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
-    url("../images/nursery.jpg"),
-    var(--forest);
-  background-size: cover;
-  background-position: center;
-}
+  .logo {
+    font-size: 2rem;
+  }
 
-.involved-hero {
-  background:
-    linear-gradient(rgba(15, 42, 33, 0.76), rgba(15, 42, 33, 0.76)),
-    url("../images/seedlings.jpg"),
-    var(--forest);
-  background-size: cover;
-  background-position: center;
+  .site-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+  }
+
+  .hero,
+  .page-hero {
+    min-height: auto;
+    padding: 4rem 5%;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+
+  .hero p,
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 3.5rem 5%;
+  }
+
+  .section-heading h2,
+  .cta-section h2 {
+    font-size: clamp(1.8rem, 9vw, 2.8rem);
+  }
+
+  .card-grid,
+  .impact-grid,
+  .contact-section,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .impact-grid div,
+  .card,
+  .project-card,
+  .contact-form {
+    padding: 1.5rem;
+  }
 }
