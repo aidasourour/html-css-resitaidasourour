@@ -1,0 +1,279 @@
+:root {
+  --forest: #173d2f;
+  --deep-forest: #0f2a21;
+  --green: #2f7d4f;
+  --light-green: #dfeee3;
+  --cream: #f7f3e8;
+  --earth: #8a5a32;
+  --text: #1d1d1d;
+  --muted-text: #4f5f55;
+  --white: #ffffff;
+  --border: #d6dfd8;
+  --shadow: 0 12px 30px rgba(15, 42, 33, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background-color: var(--cream);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.2rem 6%;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--forest);
+  text-decoration: none;
+  letter-spacing: -0.04em;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 3px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a.active {
+  border-bottom-color: var(--green);
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 6%;
+  background:
+    linear-gradient(rgba(15, 42, 33, 0.72), rgba(15, 42, 33, 0.72)),
+    url("../images/forest-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--green);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+}
+
+.hero .eyebrow {
+  color: var(--light-green);
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.1;
+  color: var(--forest);
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2.5rem, 7vw, 5.4rem);
+  max-width: 760px;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 620px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.primary-button {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  background-color: var(--forest);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+  background-color: var(--white);
+  color: var(--forest);
+}
+
+.section {
+  padding: 5rem 6%;
+}
+
+.intro-section {
+  max-width: 980px;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.cta-section h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+}
+
+.impact-section {
+  background-color: var(--light-green);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.impact-grid div {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.impact-grid strong {
+  display: block;
+  color: var(--forest);
+  font-size: 2.5rem;
+}
+
+.impact-grid span {
+  color: var(--muted-text);
+  font-weight: 700;
+}
+
+.cta-section {
+  background-color: var(--forest);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-section h2 {
+  color: var(--white);
+}
+
+.cta-section p {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+}
+
+.site-footer {
+  padding: 2rem 6%;
+  text-align: center;
+  background-color: var(--deep-forest);
+  color: var(--white);
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 4rem 6%;
+  }
+
+  .card-grid,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
